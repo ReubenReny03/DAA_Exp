@@ -1,4 +1,3 @@
-#krushkals
 class storer:
     def __init__(self,frome,toe,weighte):
         self.frome = frome
@@ -24,16 +23,9 @@ o = storer(5, 4, 3)
 list_to_in = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o]
 already_covered = []
 new_sorted_list = sorted(list_to_in, key=lambda x: x.weighte)
-can_cover = []
-can_cover.append(new_sorted_list[0].frome)
-can_cover.append(new_sorted_list[0].toe)
 for x in new_sorted_list:
-    if x.toe not in already_covered and x.toe in can_cover:
+    if x.toe not in already_covered:
         print(f"from {x.frome} to {x.toe} the distace is {x.weighte}")
         already_covered.append(x.toe)
-        for wanted in new_sorted_list:
-            if (wanted.frome == x.toe):
-                if wanted.toe not in can_cover:
-                    can_cover.append(wanted.toe)
 
 
