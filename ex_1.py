@@ -42,9 +42,3 @@ for x in sorted_list:
 print(f"you can have items {accepted_list}")
 if remaning_weight != 0:
     print(f"you can also add {remaning_weight} of item {remaning_item}")
-
-
-    
-
-        
-
