@@ -1,4 +1,5 @@
 # 0_1 Knapsack
+# HOW THE HECK
 class weights:
     def __init__(self,name,weight,profit):
         self.name = name
@@ -7,7 +8,7 @@ class weights:
 
 
 knapsack_weight = 5
-list_of_items = [weights(1,1,2),weights(2,3,4),weights(3,5,6),weights(4,2,5)]
+list_of_items = [weights(1,1,2),weights(2,3,4),weights(3,2,5),weights(4,2,5)]
 
 main_matrix = [[-1 for x in range(knapsack_weight+1)] for y in range(len(list_of_items)+1)]
 
@@ -24,4 +25,14 @@ for y in range(1,knapsack_weight+1):
         else:
              main_matrix[x][y] = main_matrix[x-1][y]
 print(main_matrix)
+x = knapsack_weight
+y = len(list_of_items)
+while(x>0 and y>0):
+    if (main_matrix[y][x] == main_matrix[y-1][x]):
+        y-=1
+    else:
+        print(f"take {y}")
+        x = x - list_of_items[y-1].weight
+        y-=1
 
+        
