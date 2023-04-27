@@ -19,8 +19,8 @@ h = storer(4,3,6)
 
 
 list_to_in = [a,b,c,d,e,f,g,h]
-already_covered = []
-new_sorted_list = sorted(list_to_in, key=lambda x: x.weighte)
+already_covered =  []
+new_sorted_list = [a,b,c,d,e,f,g,h] #sorted(list_to_in, key=lambda x: x.weighte)
 already_covered.append(new_sorted_list[0].frome)
 for x in new_sorted_list:
     if x.toe not in already_covered:
